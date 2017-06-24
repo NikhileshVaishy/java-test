@@ -1,4 +1,4 @@
-# XML parsing and RESTapi Test
+# XML parsing and RESTful API Test
 
 As a part of SevenRE recruitment process, candidates need to demonstrate their coding skills. For this they would need to extend current project to fulfill given tasks.
 
