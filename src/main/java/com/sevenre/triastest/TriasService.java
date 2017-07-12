@@ -14,7 +14,7 @@ public class TriasService {
 
     private static final String URL = "http://trias.vrn.de:8080/Middleware/Data/trias";
 
-    public String stopLocRequestByGeo(double lat, double lon, int numberOfResult) throws IOException {
+    public String stopLocRequestByGeo(double lat, double lon) throws IOException {
         String body = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>" +
                 "<Trias xmlns=\"trias\" xmlns:siri=\"http://www.siri.org.uk/siri\" version=\"1.0\">" +
                 " <ServiceRequest>" +
@@ -27,12 +27,12 @@ public class TriasService {
                 "        <Longitude>" + lon + "</Longitude>" +
                 "        <Latitude>" + lat + "</Latitude>" +
                 "       </Center>" +
-                "      </Circle>" +
+                "        <Radius>1000000</Radius>" +
+                "       </Circle>" +
                 "     </GeoRestriction>" +
                 "    </InitialInput>" +
                 "    <Restrictions>" +
                 "     <Type>stop</Type>" +
-                "     <NumberOfResults>" + numberOfResult + "</NumberOfResults>" +
                 "    </Restrictions>" +
                 "   </LocationInformationRequest>" +
                 "  </RequestPayload>" +
