@@ -1,12 +1,14 @@
 package com.sevenre.triastest;
 
 import com.squareup.okhttp.*;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
 /**
  * Created by shah on 6/23/2017.
  */
+@Service
 public class TriasService {
 
     private static OkHttpClient client = new OkHttpClient();
