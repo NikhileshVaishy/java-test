@@ -14,6 +14,7 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by shah on 6/23/2017.
@@ -37,7 +38,7 @@ public class TriasController {
     }
 
     @RequestMapping(value = "/createStop", method = RequestMethod.POST)
-    public boolean createStop(@RequestBody CreateStopDto createStopDto) throws IOException {
+    public boolean createStop(@RequestBody CreateStopDto createStopDto) throws ExecutionException, InterruptedException {
         return stopService.create(createStopDto);
     }
 
